@@ -1,0 +1,429 @@
+@font-face {
+  font-family: "Knit";
+  src: url("../../font/nKKZ-Go6G5tXcraVGwA.woff2");
+  font-weight: 500;
+}
+* {
+  font-family: "knit";
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #f4a950;
+  border-radius: 10px;
+}
+
+.wrapper header {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+}
+.wrapper header nav #sidebar {
+  border: 0;
+  background: none;
+  color: #f4a950;
+  outline: none !important;
+}
+.wrapper header nav .logo {
+  width: 130px;
+}
+.wrapper header nav .right-nav button.btn-connect-nav {
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  font-family: "Knit";
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  outline: none;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 32px;
+  padding: 0px 16px;
+  background-color: #ffe959;
+  color: #fff;
+  margin-right: 10px;
+}
+.wrapper header nav .right-nav .modal-show {
+  border-radius: 32px;
+}
+.wrapper header nav .right-nav .modal-show .modal-title {
+  color: #161b21;
+  font-weight: 800;
+}
+.wrapper header nav .right-nav .modal-show .modal-body .list-button-modal button {
+  border: 0;
+  background-color: #939597;
+  border-radius: 16px;
+  color: #ffe959;
+}
+.wrapper header nav .right-nav .modal-show .modal-body .list-button-modal a {
+  color: #ffe959;
+}
+.wrapper .main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #faf9fa;
+}
+@media only screen and (max-width: 480px), (max-width: 768px), (max-width: 960px) {
+  .wrapper .main .menu_reponsive {
+    position: fixed;
+    width: 240px;
+    height: 100vh;
+    top: 0;
+    overflow-y: scroll;
+    transform: translateX(0);
+    transition: all ease-out 0.4s;
+  }
+  .wrapper .main .article_reponsive::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4a950;
+    opacity: 0.8;
+    z-index: 2;
+    transition: all 0.4s;
+  }
+}
+.wrapper .main aside {
+  position: fixed;
+  background-color: #fff;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 240px;
+  height: 100vh;
+  border-right: 2px solid rgba(133, 133, 133, 0.1);
+  overflow: inherit;
+  padding: 0;
+}
+@media only screen and (max-width: 480px) {
+  .wrapper .main aside {
+    background-color: #fff;
+    z-index: 10;
+    transform: translateX(-240px);
+    transition: all ease-out 0.4s;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .wrapper .main aside {
+    background-color: #fff;
+    z-index: 10;
+    transform: translateX(-240px);
+    transition: all ease-out 0.4s;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .wrapper .main aside {
+    background-color: #fff;
+    z-index: 10;
+    transform: translateX(-240px);
+    transition: all ease-out 0.4s;
+  }
+}
+.wrapper .main aside .aside-top {
+  flex-direction: column;
+  overflow: hidden auto;
+  margin-top: 80px;
+}
+.wrapper .main aside .aside-top::-webkit-scrollbar {
+  width: 10px;
+}
+.wrapper .main aside .aside-top::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #f7f5f5;
+  border-radius: 10px;
+}
+.wrapper .main aside .aside-top::-webkit-scrollbar-thumb {
+  background: #f4a950;
+  border-radius: 10px;
+}
+@media screen and (max-width: 480px) {
+  .wrapper .main aside .aside-top {
+    height: 100%;
+  }
+}
+.wrapper .main aside .accordion a {
+  width: 100%;
+  text-decoration: none;
+  color: #f4a950;
+  box-shadow: none;
+}
+.wrapper .main aside .footer-aside {
+  padding: 8px 4px;
+  color: #f4a950;
+  bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .wrapper .main aside .footer-aside {
+    height: 200px !important;
+  }
+}
+.wrapper .main aside .footer-aside a {
+  text-decoration: none;
+}
+.wrapper .main aside .footer-aside a span {
+  font-size: 13px;
+  color: #f4a950;
+}
+.wrapper .main aside .footer-aside img {
+  width: 1.5em;
+  background-color: aqua;
+  padding: 3px;
+  border-radius: 50%;
+}
+.wrapper .main aside .footer-aside span {
+  font-family: "Knit";
+  font-size: 18px;
+  font-weight: 600;
+}
+.wrapper .main article {
+  position: absolute;
+  right: 0;
+  margin-top: 80px;
+}
+@media only screen and (max-width: 768px), (max-width: 960px) {
+  .wrapper .main article {
+    width: 100%;
+  }
+}
+.wrapper .main article .article-top {
+  height: 250px;
+  background-repeat: no-repeat;
+  background-image: url("../../images/svg/pan-bg2.svg"), url("../../images/svg/pan-bg.svg");
+  background-position: left center, right center;
+}
+@media only screen and (max-width: 480px), (max-width: 768px), (max-width: 960px) {
+  .wrapper .main article .article-top {
+    background-image: url("../../images/svg/pan-bg-mobile.svg");
+    background-position: center top;
+  }
+}
+@media only screen and (max-width: 480px), (max-width: 768px), (max-width: 960px) {
+  .wrapper .main article .article-top .article-top-center {
+    padding-top: 60px;
+  }
+}
+.wrapper .main article .article-top .article-top-center h1 {
+  font-size: 42px;
+  color: #f4a950;
+  font-weight: 800;
+}
+.wrapper .main article .article-top .article-top-center p {
+  color: #161b21;
+  font-weight: 500;
+}
+.wrapper .main article .section-cake {
+  background-image: url("../../images/svg/cake-bg.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  min-height: 376px;
+  border-radius: 40px;
+  border: 0;
+}
+.wrapper .main article .section-cake h1 {
+  font-weight: 800;
+  color: #161b21;
+}
+.wrapper .main article .section-cake .text-section-cake-first h5 {
+  font-size: 15px;
+  color: #f4a950;
+  font-weight: 700;
+}
+.wrapper .main article .section-cake .text-section-cake-first p {
+  font-size: 15px;
+  color: #767675;
+  font-weight: 700;
+}
+.wrapper .main article .section-cake .text-section-cake-second h5 {
+  font-size: 15px;
+  color: #f4a950;
+  font-weight: 700;
+}
+.wrapper .main article .section-cake .text-section-cake-second p {
+  font-size: 15px;
+  color: #767675;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.wrapper .main article .section-cake .btn-section .btn-section-cake {
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Knit";
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  outline: none;
+  height: 50px;
+  background-color: #ffe959;
+  color: #fff;
+  border: 0;
+  position: relative;
+  transition: all 0.4s;
+}
+.wrapper .main article .section-cake .btn-section .btn-section-cake:hover::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d5cccc;
+  color: #fff;
+  opacity: 0.4;
+  border-radius: 16px;
+  transition: all 0.4s;
+}
+.wrapper .main article .section-ticket {
+  background-image: url("../../images/svg/ticket-bg.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  min-height: 376px;
+  border-radius: 40px;
+  border: 0;
+}
+.wrapper .main article .section-ticket h1 {
+  font-weight: 800;
+  color: #161b21;
+}
+.wrapper .main article .section-ticket .text-section-ticket-first h5 {
+  font-size: 15px;
+  color: #f4a950;
+  font-weight: 700;
+}
+.wrapper .main article .section-ticket .text-section-ticket-first p {
+  font-size: 15px;
+  color: #767675;
+  font-weight: 700;
+}
+.wrapper .main article .section-ticket .text-section-ticket-second h5 {
+  font-size: 15px;
+  color: #f4a950;
+  font-weight: 700;
+}
+.wrapper .main article .section-ticket .text-section-ticket-second p {
+  font-size: 20px;
+  color: #161b21;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.wrapper .main article .section-ticket .btn-section .btn-section-ticket {
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Knit";
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  outline: none;
+  height: 50px;
+  background-color: #ffe959;
+  color: #fff;
+  border: 0;
+  position: relative;
+  transition: all 0.4s;
+}
+.wrapper .main article .section-ticket .btn-section .btn-section-ticket:hover::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d5cccc;
+  color: #fff;
+  opacity: 0.4;
+  border-radius: 16px;
+  transition: all 0.4s;
+}
+.wrapper .main article #section-two a {
+  text-decoration: none;
+}
+.wrapper .main article #section-two a .card-second {
+  border: 0;
+  border-radius: 32px;
+  height: 160px;
+}
+.wrapper .main article #section-two a .card-second .card-body h2::first-line {
+  font-size: 15px;
+  color: #161b21;
+  font-weight: 800;
+}
+.wrapper .main article #section-two a .card-second .card-body h3 {
+  font-size: 25px;
+  color: #f4a950;
+  font-weight: 800;
+}
+.wrapper .main article #section-two a .card-second:hover {
+  background: white;
+  opacity: 0.7;
+  transition: 0.4s;
+}
+.wrapper .main article #section-two a .card-second-center {
+  border: 0;
+  border-radius: 32px;
+  height: 160px;
+  background: linear-gradient(#ffe959, #ff7300);
+  height: 200px;
+}
+.wrapper .main article #section-two a .card-second-center .card-body h2::first-line {
+  font-size: 15px;
+  color: #161b21;
+  font-weight: 800;
+}
+.wrapper .main article #section-two a .card-second-center .card-body h3 {
+  font-size: 25px;
+  color: white;
+  font-weight: 800;
+}
+.wrapper .main article #section-two a .card-second-center:hover {
+  background-color: #fff;
+  opacity: 0.8;
+  transition: all 0.4s;
+}
+.wrapper .main article #section-there .card-third {
+  border: 0;
+  border-radius: 32px;
+  height: auto;
+  color: #161b21;
+}
+.wrapper .main article #section-there .card-third .card-body h5 {
+  font-size: 30px;
+  font-weight: 800;
+  padding-bottom: 20px;
+}
+.wrapper .main article #section-there .card-third .card-body p.text-one {
+  font-size: 20px;
+  font-weight: 800;
+}
+.wrapper .main article #section-there .card-third .card-body p.text-two {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f4a950 !important;
+}
+
+/*# sourceMappingURL=style.css.map */

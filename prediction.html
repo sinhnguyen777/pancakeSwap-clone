@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHUPCROP</title>
+    <link rel="stylesheet" href="public/bootstrap-5.0.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="public/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="public/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="public/sass/prediction/style.css">
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg border-bottom">
+                <div class="container-fluid d-flex justify-content-between">
+                    <div class="navbar-brand d-flex justify-content-between">
+                        <button id="sidebar"><i class="fas fa-bars"></i></button>
+                        <a href="">
+                            <img class="logo" src="public/images/logo-design.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="right-nav d-flex justify-content-between">
+                        <div class="navbar-brand d-flex justify-content-between">
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-connect-nav" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Connect
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered p-2">
+                                    <div class="modal-content  modal-show ">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Connect to a wallet</h5>
+                                            <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="list-group list-button-modal">
+                                                <button type="button"
+                                                    class="list-group-item list-group-item-action my-1 d-flex justify-content-between">
+                                                    <div class="text-btn-modal">
+                                                        Metamask
+                                                    </div>
+                                                    <img src="public/images/svg/btn-1.svg" alt="">
+                                                </button>
+                                                <button type="button"
+                                                    class="list-group-item list-group-item-action my-1 d-flex justify-content-between">
+                                                    <div class="text-btn-modal">
+                                                        TrustWallet
+                                                    </div>
+                                                    <img src="public/images/svg/btn-2.svg" alt="">
+                                                </button>
+                                                <button type="button"
+                                                    class="list-group-item list-group-item-action my-1 d-flex justify-content-between">
+                                                    <div class="text-btn-modal">
+                                                        MathWallet
+                                                    </div>
+                                                    <img src="public/images/svg/btn-3.svg" alt="">
+                                                </button>
+                                                <button type="button"
+                                                    class="list-group-item list-group-item-action my-1 d-flex justify-content-between">
+                                                    <div class="text-btn-modal">
+                                                        TokenPocket
+                                                    </div>
+                                                    <img src="public/images/svg/btn-4.svg" alt="">
+                                                </button>
+                                                <button type="button"
+                                                    class="list-group-item list-group-item-action my-1 d-flex justify-content-between">
+                                                    <div class="text-btn-modal">
+                                                        WalletConnect
+                                                    </div>
+                                                    <img src="public/images/svg/btn-5.svg" alt="">
+                                                </button>
+                                                <button type="button"
+                                                    class="list-group-item list-group-item-action my-1 d-flex justify-content-between">
+                                                    <div class="text-btn-modal">
+                                                        Binance Chain Wallet
+                                                    </div>
+                                                    <img src="public/images/svg/btn-6.svg" alt="">
+                                                </button>
+                                                <button type="button"
+                                                    class="list-group-item list-group-item-action my-1 d-flex justify-content-between">
+                                                    <div class="text-btn-modal">
+                                                        SafePal Wallet
+                                                    </div>
+                                                    <img src="public/images/svg/btn-7.svg" alt="">
+                                                </button>
+
+                                                <a href=""
+                                                    class="text-decoration-none d-flex justify-content-center align-items-center pt-3"><i
+                                                        class="far fa-question-circle"></i> &nbsp; Learn how to
+                                                    connect</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile">
+                                <a href="">
+                                    <svg viewBox="0 0 32 32" width="32px" height="32px" color="text"
+                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                        <path
+                                            d="M32 16c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0s16 7.163 16 16z"
+                                            fill="#e9eaeb"></path>
+                                        <mask id="A" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32"
+                                            height="32">
+                                            <path
+                                                d="M32 16c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0s16 7.163 16 16z"
+                                                fill="#c4c4c4"></path>
+                                        </mask>
+                                        <g mask="url(#A)">
+                                            <path
+                                                d="M25.128 16.436c0 3.115-4.133 5.641-9.231 5.641s-9.231-2.526-9.231-5.641V15h18.461v1.436zm2.205 13.806c0-3.815-5.074-6.908-11.333-6.908S4.667 26.426 4.667 30.242V32h22.667v-1.759z"
+                                                fill="#bdc2c4"></path>
+                                            <path fill-rule="evenodd"
+                                                d="M10.234 5.601C9.942 4.264 10.96 3 12.328 3c1.184 0 2.143.959 2.143 2.143v3.873l1.427-.067c.589 0 1.166.034 1.724.098V5.143c0-1.184.959-2.143 2.143-2.143 1.368 0 2.386 1.264 2.093 2.601l-.931 4.258c2.529 1.006 4.201 2.749 4.201 4.731 0 3.115-4.133 5.641-9.231 5.641s-9.231-2.526-9.231-5.641c0-2.053 1.794-3.849 4.476-4.836l-.908-4.153z"
+                                                fill="#bdc2c4"></path>
+                                            <ellipse cx="12.308" cy="14.846" rx="1.026" ry="1.538" fill="#e9eaeb">
+                                            </ellipse>
+                                            <ellipse cx="19.385" cy="14.846" rx="1.026" ry="1.538" fill="#e9eaeb">
+                                            </ellipse>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="main">
+            <div class="row col-md-12 m-0 p-0 d-flex justify-content-between">
+                <aside class="col-md-2" id="aside">
+                    <div class="list-group aside-top border-0 ">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item border-0">
+                                <a href="/" class="accordion collapsed list-group-item-action px-4 py-3" type="button">
+                                    <span class="pe-2"><i class="fas fa-home"></i></span>
+                                    Home
+                                </a>
+                            </div>
+                            <div class="accordion-item border-0">
+                                <a href="#collapseOne" class="accordion collapsed list-group-item-action px-4 py-3"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                    aria-expanded="false" aria-controls="collapseOne">
+                                    <span class="pe-2"><i class="fas fa-exchange-alt"></i></span>
+                                    Trade
+                                    <span><i class="fas fa-caret-down"></i></span>
+                                </a>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body p-0">
+                                        <ul class="nav flex-column ps-3">
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page"
+                                                    href="/Exchange.html">Exchange</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page"
+                                                    href="#">Liquidity</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">LP
+                                                    Migration</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">V1 Liquidity
+                                                    (Old)</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0">
+                                <a href="/farms.html" class="accordion collapsed list-group-item-action px-4 py-3"
+                                    type="button">
+                                    <span class="pe-2"><i class="fas fa-truck-monster"></i></span>
+                                    Farms
+                                </a>
+                            </div>
+                            <div class="accordion-item border-0">
+                                <a href="" class="accordion collapsed list-group-item-action px-4 py-3" type="button">
+                                    <span class="pe-2"><i class="fas fa-vest"></i></span>
+                                    Pools
+                                </a>
+                            </div>
+                            <div class="accordion-item border-0">
+                                <a href="" class="accordion collapsed list-group-item-action px-4 py-3" type="button">
+                                    <span class="pe-2"><i class="fas fa-tag"></i></span>
+                                    Prediction (BETA)
+                                </a>
+                            </div>
+                            <div class="accordion-item border-0">
+                                <a href="" class="accordion collapsed list-group-item-action px-4 py-3" type="button">
+                                    <span class="pe-2"><i class="fas fa-sort"></i></span>
+                                    Collectibles
+                                </a>
+                            </div>
+                            <div class="accordion-item border-0">
+                                <a href="" class="accordion collapsed list-group-item-action px-4 py-3" type="button">
+                                    <span class="pe-2"><i class="fas fa-award"></i></span>
+                                    Team Battle
+                                </a>
+                            </div>
+                            <div class="accordion-item border-0">
+                                <a href="" class="accordion collapsed list-group-item-action px-4 py-3" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    <span class="pe-2"><i class="fas fa-users"></i></span>
+                                    Teams & Profile
+                                    <span><i class="fas fa-caret-down"></i></span>
+                                </a>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body p-0">
+                                        <ul class="nav flex-column ps-3">
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page"
+                                                    href="#">Leaderboard</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">Task
+                                                    Center</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">Your
+                                                    Profile</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0">
+                                <a href="" class="accordion collapsed list-group-item-action px-4 py-3" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThere" aria-expanded="false"
+                                    aria-controls="collapseThere">
+                                    <span class="pe-2"><i class="fas fa-chart-bar"></i></span>
+                                    Info
+                                    <span><i class="fas fa-caret-down"></i></span>
+                                </a>
+                                <div id="collapseThere" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body p-0">
+                                        <ul class="nav flex-column ps-3">
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">Overview</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">Tokens</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">Pairs</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">Accounts</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0">
+                                <a href="" class="accordion collapsed list-group-item-action px-4 py-3" type="button">
+                                    <span class="pe-2"><i class="fas fa-store"></i></span>
+                                    IFO
+                                </a>
+                            </div>
+                            <div class="accordion-item border-0">
+                                <a href="" class="accordion collapsed list-group-item-action px-4 py-3" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                    aria-controls="collapseFour">
+                                    <span class="pe-2"><i class="fas fa-angle-double-down"></i></span>
+                                    More
+                                    <span><i class="fas fa-caret-down"></i></span>
+                                </a>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body p-0">
+                                        <ul class="nav flex-column ps-3">
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">Contact</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">Voting</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">Github</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">Docs</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">Blog</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  px-4 py-3" aria-current="page" href="#">Merch</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-aside px-4 border">
+                        <div class="row d-flex justify-content-between py-3">
+                            <div class="col-5">
+                                <a href="" class=" d-flex align-items-center">
+                                    <img src="public/images/svg/cake.svg" alt="">
+                                    <span class="ps-2">$19.639</span>
+                                </a>
+                            </div>
+                            <div class="col-5 d-flex justify-content-evenly">
+                                <span>
+                                    <i class="fab fa-telegram"></i>
+                                </span>
+                                <span>
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-between py-3 ">
+                            <div class="col-5  d-flex justify-content-center">
+                                <span>
+                                    <i class="far fa-sun"></i> / <i class="far fa-moon"></i>
+                                </span>
+                            </div>
+                            <div class="col-5 ">
+                                <span><i class="fas fa-globe"></i> EN</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <article class="col-md-10 p-0" id="article">
+                    <div class="main-prediction align-items-center">
+                        <section>
+                            <div class="container p-5">
+                                <div class="row top-prediction d-flex justify-content-between py-5">
+                                    <div class="col-2">
+                                        <div class="top-left-prediction">
+                                            <div class="content d-flex justify-content-end">
+                                                <div class="svg-left">
+                                                    <img src="public/images/svg/top-left-prediction.svg" alt="">
+                                                </div>
+                                                <div class="svg-right d-flex justify-content-between">
+                                                    BNBUSDT &nbsp; <span>$363.519</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="top-right-prediction">
+                                            <div class="content d-flex justify-content-start">
+                                                <div class="svg-left d-flex justify-content-between">
+                                                    <p class="m-0">04:06</p>
+                                                    <span> 5m </span>
+                                                </div>
+                                                <div class="svg-right">
+                                                    <img src="public/images/svg/clock.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row slide-prediction w-100 m-0">
+                                    <div class="responsive owl-carousel owl-theme">
+                                        <div class="card item card-slide-show col mx-2">
+                                            <div class="card-header">
+                                                <span><i class="fas fa-ban"></i> &nbsp; Expired</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-top px-3">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 49.2757L10.0003 64H234L234 49.2753C234 42.5136 229.749 36.4819 223.381 34.2077L138.48 3.8859C127.823 0.0796983 116.177 0.0796931 105.519 3.8859L20.6188 34.2076C14.2508 36.4819 10.0001 42.5138 10.0001 49.2757Z"
+                                                                fill="#31D0AA"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1.03125" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic"
+                                                                    k2="-1" k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="up-card-top text-center">
+                                                        <h3>UP</h3>
+                                                        <span>Payout</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-center w-100 p-3">
+                                                    <p>Closed Price</p>
+                                                    <div class="row span-card">
+                                                        <div class=" d-flex justify-content-between align-items-center">
+                                                            <h4 class="m-0">$333.765</h4>
+                                                            <button><i class="fas fa-arrow-up"></i> &nbsp; $1.709</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card pt-2">
+                                                        <div class="d-flex justify-content-between">
+                                                            <span>Locked Price</span>
+                                                            <span>$332.056</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card py-1">
+                                                        <div class="d-flex fw-bold justify-content-between">
+                                                            <span>Prize Pool</span>
+                                                            <span>26.949 BNB</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="card-bottom px-3 ">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 15.7243L10.0003 1H234L234 15.7247C234 22.4864 229.749 28.5181 223.381 30.7923L138.48 61.1141C127.823 64.9203 116.177 64.9203 105.519 61.1141L20.6188 30.7924C14.2508 28.5181 10.0001 22.4862 10.0001 15.7243Z"
+                                                                fill="#EFF4F5"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1"
+                                                                    k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="down-card-bottom text-center">
+                                                        <span>Payout</span>
+                                                        <h3 class="m-0">DOWN</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card item card-slide-show col mx-2">
+                                            <div class="card-header">
+                                                <span><i class="fas fa-ban"></i> &nbsp; Expired</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-top px-3">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 49.2757L10.0003 64H234L234 49.2753C234 42.5136 229.749 36.4819 223.381 34.2077L138.48 3.8859C127.823 0.0796983 116.177 0.0796931 105.519 3.8859L20.6188 34.2076C14.2508 36.4819 10.0001 42.5138 10.0001 49.2757Z"
+                                                                fill="#31D0AA"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1.03125" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic"
+                                                                    k2="-1" k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="up-card-top text-center">
+                                                        <h3>UP</h3>
+                                                        <span>Payout</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-center w-100 p-3">
+                                                    <p>Closed Price</p>
+                                                    <div class="row span-card">
+                                                        <div class=" d-flex justify-content-between align-items-center">
+                                                            <h4 class="m-0">$333.765</h4>
+                                                            <button><i class="fas fa-arrow-up"></i> &nbsp; $1.709</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card pt-2">
+                                                        <div class="d-flex justify-content-between">
+                                                            <span>Locked Price</span>
+                                                            <span>$332.056</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card py-1">
+                                                        <div class="d-flex fw-bold justify-content-between">
+                                                            <span>Prize Pool</span>
+                                                            <span>26.949 BNB</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="card-bottom px-3 ">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 15.7243L10.0003 1H234L234 15.7247C234 22.4864 229.749 28.5181 223.381 30.7923L138.48 61.1141C127.823 64.9203 116.177 64.9203 105.519 61.1141L20.6188 30.7924C14.2508 28.5181 10.0001 22.4862 10.0001 15.7243Z"
+                                                                fill="#EFF4F5"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1"
+                                                                    k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="down-card-bottom text-center">
+                                                        <span>Payout</span>
+                                                        <h3 class="m-0">DOWN</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card item card-slide-show col mx-2">
+                                            <div class="card-header">
+                                                <span><i class="fas fa-ban"></i> &nbsp; Expired</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-top px-3">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 49.2757L10.0003 64H234L234 49.2753C234 42.5136 229.749 36.4819 223.381 34.2077L138.48 3.8859C127.823 0.0796983 116.177 0.0796931 105.519 3.8859L20.6188 34.2076C14.2508 36.4819 10.0001 42.5138 10.0001 49.2757Z"
+                                                                fill="#31D0AA"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1.03125" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic"
+                                                                    k2="-1" k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="up-card-top text-center">
+                                                        <h3>UP</h3>
+                                                        <span>Payout</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-center w-100 p-3">
+                                                    <p>Closed Price</p>
+                                                    <div class="row span-card">
+                                                        <div class=" d-flex justify-content-between align-items-center">
+                                                            <h4 class="m-0">$333.765</h4>
+                                                            <button><i class="fas fa-arrow-up"></i> &nbsp; $1.709</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card pt-2">
+                                                        <div class="d-flex justify-content-between">
+                                                            <span>Locked Price</span>
+                                                            <span>$332.056</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card py-1">
+                                                        <div class="d-flex fw-bold justify-content-between">
+                                                            <span>Prize Pool</span>
+                                                            <span>26.949 BNB</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="card-bottom px-3 ">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 15.7243L10.0003 1H234L234 15.7247C234 22.4864 229.749 28.5181 223.381 30.7923L138.48 61.1141C127.823 64.9203 116.177 64.9203 105.519 61.1141L20.6188 30.7924C14.2508 28.5181 10.0001 22.4862 10.0001 15.7243Z"
+                                                                fill="#EFF4F5"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1"
+                                                                    k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="down-card-bottom text-center">
+                                                        <span>Payout</span>
+                                                        <h3 class="m-0">DOWN</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card item card-slide-show col mx-2">
+                                            <div class="card-header">
+                                                <span><i class="fas fa-ban"></i> &nbsp; Expired</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-top px-3">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 49.2757L10.0003 64H234L234 49.2753C234 42.5136 229.749 36.4819 223.381 34.2077L138.48 3.8859C127.823 0.0796983 116.177 0.0796931 105.519 3.8859L20.6188 34.2076C14.2508 36.4819 10.0001 42.5138 10.0001 49.2757Z"
+                                                                fill="#31D0AA"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1.03125" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic"
+                                                                    k2="-1" k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="up-card-top text-center">
+                                                        <h3>UP</h3>
+                                                        <span>Payout</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-center w-100 p-3">
+                                                    <p>Closed Price</p>
+                                                    <div class="row span-card">
+                                                        <div class=" d-flex justify-content-between align-items-center">
+                                                            <h4 class="m-0">$333.765</h4>
+                                                            <button><i class="fas fa-arrow-up"></i> &nbsp; $1.709</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card pt-2">
+                                                        <div class="d-flex justify-content-between">
+                                                            <span>Locked Price</span>
+                                                            <span>$332.056</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card py-1">
+                                                        <div class="d-flex fw-bold justify-content-between">
+                                                            <span>Prize Pool</span>
+                                                            <span>26.949 BNB</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="card-bottom px-3 ">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 15.7243L10.0003 1H234L234 15.7247C234 22.4864 229.749 28.5181 223.381 30.7923L138.48 61.1141C127.823 64.9203 116.177 64.9203 105.519 61.1141L20.6188 30.7924C14.2508 28.5181 10.0001 22.4862 10.0001 15.7243Z"
+                                                                fill="#EFF4F5"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1"
+                                                                    k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="down-card-bottom text-center">
+                                                        <span>Payout</span>
+                                                        <h3 class="m-0">DOWN</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card item card-slide-show col mx-2">
+                                            <div class="card-header">
+                                                <span><i class="fas fa-ban"></i> &nbsp; Expired</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-top px-3">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 49.2757L10.0003 64H234L234 49.2753C234 42.5136 229.749 36.4819 223.381 34.2077L138.48 3.8859C127.823 0.0796983 116.177 0.0796931 105.519 3.8859L20.6188 34.2076C14.2508 36.4819 10.0001 42.5138 10.0001 49.2757Z"
+                                                                fill="#31D0AA"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1.03125" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic"
+                                                                    k2="-1" k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="up-card-top text-center">
+                                                        <h3>UP</h3>
+                                                        <span>Payout</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-center w-100 p-3">
+                                                    <p>Closed Price</p>
+                                                    <div class="row span-card">
+                                                        <div class=" d-flex justify-content-between align-items-center">
+                                                            <h4 class="m-0">$333.765</h4>
+                                                            <button><i class="fas fa-arrow-up"></i> &nbsp; $1.709</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card pt-2">
+                                                        <div class="d-flex justify-content-between">
+                                                            <span>Locked Price</span>
+                                                            <span>$332.056</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card py-1">
+                                                        <div class="d-flex fw-bold justify-content-between">
+                                                            <span>Prize Pool</span>
+                                                            <span>26.949 BNB</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="card-bottom px-3 ">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 15.7243L10.0003 1H234L234 15.7247C234 22.4864 229.749 28.5181 223.381 30.7923L138.48 61.1141C127.823 64.9203 116.177 64.9203 105.519 61.1141L20.6188 30.7924C14.2508 28.5181 10.0001 22.4862 10.0001 15.7243Z"
+                                                                fill="#EFF4F5"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1"
+                                                                    k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="down-card-bottom text-center">
+                                                        <span>Payout</span>
+                                                        <h3 class="m-0">DOWN</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card item card-slide-show col mx-2">
+                                            <div class="card-header">
+                                                <span><i class="fas fa-ban"></i> &nbsp; Expired</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-top px-3">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 49.2757L10.0003 64H234L234 49.2753C234 42.5136 229.749 36.4819 223.381 34.2077L138.48 3.8859C127.823 0.0796983 116.177 0.0796931 105.519 3.8859L20.6188 34.2076C14.2508 36.4819 10.0001 42.5138 10.0001 49.2757Z"
+                                                                fill="#31D0AA"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1.03125" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic"
+                                                                    k2="-1" k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="up-card-top text-center">
+                                                        <h3>UP</h3>
+                                                        <span>Payout</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-center w-100 p-3">
+                                                    <p>Closed Price</p>
+                                                    <div class="row span-card">
+                                                        <div class=" d-flex justify-content-between align-items-center">
+                                                            <h4 class="m-0">$333.765</h4>
+                                                            <button><i class="fas fa-arrow-up"></i> &nbsp; $1.709</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card pt-2">
+                                                        <div class="d-flex justify-content-between">
+                                                            <span>Locked Price</span>
+                                                            <span>$332.056</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card py-1">
+                                                        <div class="d-flex fw-bold justify-content-between">
+                                                            <span>Prize Pool</span>
+                                                            <span>26.949 BNB</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="card-bottom px-3 ">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 15.7243L10.0003 1H234L234 15.7247C234 22.4864 229.749 28.5181 223.381 30.7923L138.48 61.1141C127.823 64.9203 116.177 64.9203 105.519 61.1141L20.6188 30.7924C14.2508 28.5181 10.0001 22.4862 10.0001 15.7243Z"
+                                                                fill="#EFF4F5"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1"
+                                                                    k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="down-card-bottom text-center">
+                                                        <span>Payout</span>
+                                                        <h3 class="m-0">DOWN</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card item card-slide-show col mx-2">
+                                            <div class="card-header">
+                                                <span><i class="fas fa-ban"></i> &nbsp; Expired</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-top px-3">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 49.2757L10.0003 64H234L234 49.2753C234 42.5136 229.749 36.4819 223.381 34.2077L138.48 3.8859C127.823 0.0796983 116.177 0.0796931 105.519 3.8859L20.6188 34.2076C14.2508 36.4819 10.0001 42.5138 10.0001 49.2757Z"
+                                                                fill="#31D0AA"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1.03125" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic"
+                                                                    k2="-1" k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="up-card-top text-center">
+                                                        <h3>UP</h3>
+                                                        <span>Payout</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-center w-100 p-3">
+                                                    <p>Closed Price</p>
+                                                    <div class="row span-card">
+                                                        <div class=" d-flex justify-content-between align-items-center">
+                                                            <h4 class="m-0">$333.765</h4>
+                                                            <button><i class="fas fa-arrow-up"></i> &nbsp; $1.709</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card pt-2">
+                                                        <div class="d-flex justify-content-between">
+                                                            <span>Locked Price</span>
+                                                            <span>$332.056</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card py-1">
+                                                        <div class="d-flex fw-bold justify-content-between">
+                                                            <span>Prize Pool</span>
+                                                            <span>26.949 BNB</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="card-bottom px-3 ">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 15.7243L10.0003 1H234L234 15.7247C234 22.4864 229.749 28.5181 223.381 30.7923L138.48 61.1141C127.823 64.9203 116.177 64.9203 105.519 61.1141L20.6188 30.7924C14.2508 28.5181 10.0001 22.4862 10.0001 15.7243Z"
+                                                                fill="#EFF4F5"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1"
+                                                                    k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="down-card-bottom text-center">
+                                                        <span>Payout</span>
+                                                        <h3 class="m-0">DOWN</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card item card-slide-show col mx-2">
+                                            <div class="card-header">
+                                                <span><i class="fas fa-ban"></i> &nbsp; Expired</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-top px-3">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 49.2757L10.0003 64H234L234 49.2753C234 42.5136 229.749 36.4819 223.381 34.2077L138.48 3.8859C127.823 0.0796983 116.177 0.0796931 105.519 3.8859L20.6188 34.2076C14.2508 36.4819 10.0001 42.5138 10.0001 49.2757Z"
+                                                                fill="#31D0AA"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1.03125" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic"
+                                                                    k2="-1" k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="up-card-top text-center">
+                                                        <h3>UP</h3>
+                                                        <span>Payout</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-center w-100 p-3">
+                                                    <p>Closed Price</p>
+                                                    <div class="row span-card">
+                                                        <div class=" d-flex justify-content-between align-items-center">
+                                                            <h4 class="m-0">$333.765</h4>
+                                                            <button><i class="fas fa-arrow-up"></i> &nbsp; $1.709</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card pt-2">
+                                                        <div class="d-flex justify-content-between">
+                                                            <span>Locked Price</span>
+                                                            <span>$332.056</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card py-1">
+                                                        <div class="d-flex fw-bold justify-content-between">
+                                                            <span>Prize Pool</span>
+                                                            <span>26.949 BNB</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="card-bottom px-3 ">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 15.7243L10.0003 1H234L234 15.7247C234 22.4864 229.749 28.5181 223.381 30.7923L138.48 61.1141C127.823 64.9203 116.177 64.9203 105.519 61.1141L20.6188 30.7924C14.2508 28.5181 10.0001 22.4862 10.0001 15.7243Z"
+                                                                fill="#EFF4F5"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1"
+                                                                    k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="down-card-bottom text-center">
+                                                        <span>Payout</span>
+                                                        <h3 class="m-0">DOWN</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card item card-slide-show col mx-2">
+                                            <div class="card-header">
+                                                <span><i class="fas fa-ban"></i> &nbsp; Expired</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-top px-3">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 49.2757L10.0003 64H234L234 49.2753C234 42.5136 229.749 36.4819 223.381 34.2077L138.48 3.8859C127.823 0.0796983 116.177 0.0796931 105.519 3.8859L20.6188 34.2076C14.2508 36.4819 10.0001 42.5138 10.0001 49.2757Z"
+                                                                fill="#31D0AA"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1.03125" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic"
+                                                                    k2="-1" k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="up-card-top text-center">
+                                                        <h3>UP</h3>
+                                                        <span>Payout</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-center w-100 p-3">
+                                                    <p>Closed Price</p>
+                                                    <div class="row span-card">
+                                                        <div class=" d-flex justify-content-between align-items-center">
+                                                            <h4 class="m-0">$333.765</h4>
+                                                            <button><i class="fas fa-arrow-up"></i> &nbsp; $1.709</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card pt-2">
+                                                        <div class="d-flex justify-content-between">
+                                                            <span>Locked Price</span>
+                                                            <span>$332.056</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row span-card py-1">
+                                                        <div class="d-flex fw-bold justify-content-between">
+                                                            <span>Prize Pool</span>
+                                                            <span>26.949 BNB</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="card-bottom px-3 ">
+                                                    <svg height="65px" width="auto" viewBox="0 0 240 65" color="text"
+                                                        xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca">
+                                                        <g filter="url(#filter0_i)">
+                                                            <path
+                                                                d="M10.0001 15.7243L10.0003 1H234L234 15.7247C234 22.4864 229.749 28.5181 223.381 30.7923L138.48 61.1141C127.823 64.9203 116.177 64.9203 105.519 61.1141L20.6188 30.7924C14.2508 28.5181 10.0001 22.4862 10.0001 15.7243Z"
+                                                                fill="#EFF4F5"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <filter id="filter0_i" x="10.0001" y="1" width="224"
+                                                                height="62.9688" filterUnits="userSpaceOnUse"
+                                                                color-interpolation-filters="sRGB">
+                                                                <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                                </feFlood>
+                                                                <feBlend mode="normal" in="SourceGraphic"
+                                                                    in2="BackgroundImageFix" result="shape"></feBlend>
+                                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                                    result="hardAlpha"></feColorMatrix>
+                                                                <feOffset></feOffset>
+                                                                <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1"
+                                                                    k3="1"></feComposite>
+                                                                <feColorMatrix type="matrix"
+                                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0">
+                                                                </feColorMatrix>
+                                                                <feBlend mode="normal" in2="shape"
+                                                                    result="effect1_innerShadow"></feBlend>
+                                                            </filter>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="down-card-bottom text-center">
+                                                        <span>Payout</span>
+                                                        <h3 class="m-0">DOWN</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="public/js/jquery-3.5.1.min.js"></script>
+    <script src="public/fontawesome-free-5.15.3-web/js/all.min.js"></script>
+    <script src="public/bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>
+    <script src="public/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="public/js/prediction-2.js"></script>
+    <script src="public/js/prediction-2.js"></script>
+
+    <script defer>
+        $(document).ready(function () {
+            $('#sidebar').click(function () {
+                $('.wrapper').toggleClass('aside');
+                $('#aside').toggleClass('menu_reponsive');
+                $('article').toggleClass('article_reponsive');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,487 @@
+@font-face {
+    font-family: 'Knit';
+    src: url('../../font/nKKZ-Go6G5tXcraVGwA.woff2');
+    font-weight: 500;
+}
+
+$text-font: 'Knit';
+$text-color: #f4a950;
+$text-color-title: #161b21;
+$button-color: #ffe959;
+$bg-color: #fff;
+
+*{
+    font-family: 'knit';
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background: $text-color;
+    border-radius: 10px;
+}
+
+.wrapper{
+    header{
+        width: 100%;
+        background-color: $bg-color;
+        position: fixed;
+        top: 0;
+        z-index: 99999;
+        nav{
+            #sidebar{
+                border: 0;
+                background: none;
+                color: $text-color;
+                outline: none !important;
+            }
+            .logo{
+                width: 130px;
+            }
+            .right-nav{
+                button.btn-connect-nav{
+                    -webkit-box-align: center;
+                    align-items: center;
+                    border-radius: 16px;
+                    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+                    cursor: pointer;
+                    // display: inline-flex;
+                    font-family: $text-font;
+                    font-size: 16px;
+                    font-weight: 600;
+                    justify-content: center;
+                    outline: none;
+                    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+                    height: 32px;
+                    padding: 0px 16px;
+                    background-color: $button-color;
+                    color: $bg-color;
+                    margin-right: 10px;
+                }
+
+                
+                //modal
+
+                .modal-show{
+                    border-radius: 32px;
+                    .modal-title{
+                        color: $text-color-title;
+                        font-weight: 800;
+                    }
+                    .modal-body{
+                        .list-button-modal{
+                            button{
+                                border: 0;
+                                background-color: #939597;
+                                border-radius: 16px;
+                                color: $button-color;
+                            }
+                            a{
+                                color: $button-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .main{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: #faf9fa;
+        // display: none;
+
+        // ----------- menu sidebar --------------
+        @media only screen and (max-width: 480px), (max-width: 768px), (max-width: 960px){
+            .menu_reponsive {
+                position: fixed;
+                width: 240px;
+                height: 100vh;
+                top: 0;
+                overflow-y: scroll;
+                transform: translateX(0);
+                transition: all ease-out 0.4s;
+            }
+    
+            .article_reponsive::after{
+                content: "";
+                position: absolute;
+                top: -30px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $text-color;
+                opacity: 0.8;
+                z-index: 2;
+                transition: all 0.4s;
+            }
+        }
+        
+
+        aside{
+            position: fixed;
+            background-color: $bg-color;
+            top: 0px;
+            left: 0px;
+            display: flex;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            width: 240px;
+            height: 100vh;
+            border-right: 2px solid rgba(133, 133, 133, 0.1);
+            overflow: inherit;
+            padding: 0;
+
+            @media only screen and (max-width: 480px) {
+                background-color: $bg-color;
+                z-index: 10;
+                transform: translateX(-240px);
+                transition: all ease-out 0.4s;
+            }
+
+            @media only screen and (max-width: 768px){
+                background-color: $bg-color;
+                z-index: 10;
+                transform: translateX(-240px);
+                transition: all ease-out 0.4s;
+            }
+            @media only screen and (max-width: 960px){
+                background-color: $bg-color;
+                z-index: 10;
+                transform: translateX(-240px);
+                transition: all ease-out 0.4s;
+            }
+
+            .aside-top{
+                flex-direction: column;
+                overflow: hidden auto;
+                margin-top: 80px;
+                &::-webkit-scrollbar{
+                    width: 10px;
+                }
+    
+                &::-webkit-scrollbar-track{
+                    box-shadow: inset 0 0 5px rgb(247, 245, 245); 
+                    border-radius: 10px;
+                }
+                
+                &::-webkit-scrollbar-thumb{
+                    background: $text-color;
+                    border-radius: 10px;
+                }
+
+                @media screen and (max-width: 480px) {
+                    height: 100%;
+                }
+            }
+            .accordion a{
+                width: 100%;
+                text-decoration: none;
+                color: $text-color;
+                box-shadow: none;
+            }
+
+            .footer-aside{
+                padding: 8px 4px;
+                color: $text-color;
+                bottom: 0;
+
+                @media screen and (max-width: 480px){
+                    height: 200px !important;
+                }
+
+                a{
+                    text-decoration: none;
+                    span{
+                        font-size: 13px;
+                        color: $text-color;
+                    }
+                }
+                img{
+                    width: 1.5em;
+                    background-color: aqua;
+                    padding: 3px;
+                    border-radius: 50%;
+                }
+                span{
+                    font-family: $text-font;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                
+            }
+        }
+        article{
+            position: absolute;
+            right: 0;
+            margin-top: 80px;
+           
+            @media only screen and (max-width: 768px), (max-width: 960px) {
+                width: 100%;
+            }
+            
+
+            .article-top {
+                height: 250px;
+                background-repeat: no-repeat;
+                background-image: url('../../images/svg/pan-bg2.svg'), url('../../images/svg/pan-bg.svg');
+                background-position: left center, right center;
+                @media only screen and (max-width: 480px), (max-width: 768px), (max-width: 960px) {
+                    background-image: url('../../images/svg/pan-bg-mobile.svg');
+                    background-position: center top;
+                }
+                .article-top-center{
+                    @media only screen and (max-width: 480px), (max-width: 768px), (max-width: 960px) {
+                        padding-top: 60px;
+                    }
+                    h1{
+                        font-size: 42px;
+                        color: $text-color;
+                        font-weight: 800;
+                    }
+                    p{
+                        color: $text-color-title;
+                        font-weight: 500;
+                    }
+                }
+                
+            }
+
+            .section-cake{
+                background-image: url('../../images/svg/cake-bg.svg');
+                background-position: right top;
+                background-repeat: no-repeat;
+                min-height: 376px;
+                border-radius: 40px;
+                border: 0;
+                h1{
+                    font-weight: 800;
+                    color: $text-color-title;
+                }
+                .text-section-cake-first{
+                    h5{
+                        font-size: 15px;
+                        color: $text-color;
+                        font-weight: 700;
+                    }
+                    p{
+                        font-size: 15px;
+                        color: #767675;
+                        font-weight: 700;
+                    }
+                }
+                .text-section-cake-second{
+                    h5{
+                        font-size: 15px;
+                        color: $text-color;
+                        font-weight: 700;
+                    }
+                    p{
+                        font-size: 15px;
+                        color: #767675;
+                        font-weight: 700;
+                        padding-top: 20px;
+                        padding-bottom: 15px;
+                    }
+                }
+                .btn-section{
+                    .btn-section-cake{
+                        align-items: center;
+                        border-radius: 16px;
+                        box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+                        cursor: pointer;
+                        display: inline-flex;
+                        font-family: $text-font;
+                        font-size: 16px;
+                        font-weight: 600;
+                        justify-content: center;
+                        outline: none;
+                        height: 50px;
+                        background-color: $button-color;
+                        // background: linear-gradient(#F5DF4D, #939597);
+                        color: $bg-color;
+                        border: 0;
+                        position: relative;
+                        transition: all 0.4s;
+                        &:hover::after{
+                            position: absolute;
+                            content: "";
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: rgb(213, 204, 204);
+                            color: $bg-color;
+                            opacity: 0.4;
+                            border-radius: 16px;
+                            transition: all 0.4s;
+                        }
+
+                    }
+                }
+            }
+
+            .section-ticket{
+                background-image: url('../../images/svg/ticket-bg.svg');
+                background-position: right top;
+                background-repeat: no-repeat;
+                min-height: 376px;
+                border-radius: 40px;
+                border: 0;
+                h1{
+                    font-weight: 800;
+                    color: $text-color-title;
+                }
+                .text-section-ticket-first{
+                    h5{
+                        font-size: 15px;
+                        color: $text-color;
+                        font-weight: 700;
+                    }
+                    p{
+                        font-size: 15px;
+                        color: #767675;
+                        font-weight: 700;
+                    }
+                }
+                .text-section-ticket-second{
+                    h5{
+                        font-size: 15px;
+                        color: $text-color;
+                        font-weight: 700;
+                    }
+                    p{
+                        font-size: 20px;
+                        color: $text-color-title;
+                        font-weight: 700;
+                        padding-top: 10px;
+                        padding-bottom: 20px;
+                    }
+                }
+                .btn-section{
+                    .btn-section-ticket{
+                        align-items: center;
+                        border-radius: 16px;
+                        box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+                        cursor: pointer;
+                        display: inline-flex;
+                        font-family: $text-font;
+                        font-size: 16px;
+                        font-weight: 600;
+                        justify-content: center;
+                        outline: none;
+                        height: 50px;
+                        background-color: #ffe959;
+                        // background: linear-gradient(#F5DF4D, #939597);
+                        color: $bg-color;
+                        border: 0;
+                        position: relative;
+                        transition: all 0.4s;
+                        &:hover::after{
+                            position: absolute;
+                            content: "";
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: rgb(213, 204, 204);
+                            color: $bg-color;
+                            opacity: 0.4;
+                            border-radius: 16px;
+                            transition: all 0.4s;
+                        }
+
+                    }
+                }
+            }
+
+            #section-two{
+                a{
+                    text-decoration: none;
+                    .card-second{
+                        border: 0;
+                        border-radius: 32px;
+                        height: 160px;
+                        .card-body{
+                            h2::first-line{
+                                font-size: 15px;
+                                color: $text-color-title;
+                                font-weight: 800;
+                            }
+                            h3{
+                                font-size: 25px;
+                                color: $text-color;
+                                font-weight: 800;
+                            }
+                        }
+                        &:hover{
+                            background: rgb(255, 255, 255);
+                            opacity: 0.7;
+                            transition: 0.4s;
+                        }
+                    }
+                    .card-second-center{
+                        border: 0;
+                        border-radius: 32px;
+                        height: 160px;
+                        // background: $text-color !important;
+                        background: linear-gradient(#ffe959, #ff7300);
+                        height: 200px;
+                        .card-body{
+                            h2::first-line{
+                                font-size: 15px;
+                                color: $text-color-title;
+                                font-weight: 800;
+                            }
+                            h3{
+                                font-size: 25px;
+                                color: rgb(255, 255, 255);
+                                font-weight: 800;
+                            }
+                        }
+                        &:hover{
+                            background-color: $bg-color;
+                            opacity: 0.8;
+                            transition: all 0.4s;
+                        }
+                    }
+                }
+            }
+
+            #section-there{
+                .card-third{
+                    border: 0;
+                    border-radius: 32px;
+                    height: auto;
+                    color: $text-color-title;
+                    .card-body{
+                        h5{
+                            font-size: 30px;
+                            font-weight: 800;
+                            padding-bottom: 20px;
+                        }
+                        p.text-one{
+                            font-size: 20px;
+                            font-weight: 800;
+                        }
+                        p.text-two{
+                            font-size: 15px;
+                            font-weight: 600;
+                            color: $text-color !important;
+                        }
+                    }
+                }   
+            }
+            
+        }
+    }
+    
+}
